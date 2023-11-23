@@ -44,4 +44,4 @@ UX Writing for Wireframes<br>
 
 ## Contact 
 
-You can reach me at [derek@wuxcontent.work](mailto:derek@uxcontent.work).
+You can reach me at [derek@uxcontent.work](mailto:derek@uxcontent.work).
