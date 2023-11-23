@@ -1,0 +1,58 @@
+<script>
+
+// photo changer
+
+function getAboutPicture() {
+	const photos = [
+		"/static/about-pictures/all-smiles.jpg", 
+		"/static/about-pictures/fancy.jpg", 
+		"/static/about-pictures/office.jpg",
+		"/static/about-pictures/hello-kotik.jpg",
+		"/static/about-pictures/takava.jpeg",
+		"/static/about-pictures/straat-met-moti.jpeg",
+		"/static/about-pictures/owl.jpeg",
+		"/static/about-pictures/at-ph.jpeg"
+	]
+
+	/*const captions = [
+		"Hi there, I'm Derek",
+		"Not always this fancy",
+		"Hi there, I'm Derek",
+		"And here’s Moti",
+		"Hi there, I'm Derek",
+		"And here’s Moti",
+		"I like birds",
+		"Hi there, I'm Derek"
+	]*/
+
+	let currentPhoto = sessionStorage.getItem("currentPhoto");
+
+
+	if (!currentPhoto) {
+		let selectedPhoto = Math.floor(Math.random() * photos.length)
+		document.getElementById("aboutImg").setAttribute("src", photos[selectedPhoto]);
+		sessionStorage.setItem("currentPhoto", photos[selectedPhoto]);
+	} else {
+		let updatedPhotoList = [];
+		let i = 0; 
+		do 
+			if (photos[i] !== currentPhoto) {
+				updatedPhotoList.push(photos[i]);
+				i++;
+			} else {
+				i++;
+			}
+		while (i < photos.length) 
+
+		let selectedPhoto = Math.floor(Math.random() * updatedPhotoList.length);
+		document.getElementById("aboutImg").setAttribute("src", updatedPhotoList[selectedPhoto]);
+		sessionStorage.setItem("currentPhoto", updatedPhotoList[selectedPhoto]);
+	}
+
+}
+
+getAboutPicture();
+
+
+//document.getElementById("aboutCaption").innerHTML = captions[selectedPhoto];
+</script>

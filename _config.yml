@@ -1,0 +1,47 @@
+# personalized settings
+
+title: "Derek Kedziora" 
+author: "Derek Kedziora"
+email: "derek@uxcontent.work"
+description: "Derek Kedziora’s content design portfolio"
+github: derekkedziora
+url: https://uxcontent.work
+timezone: Europe/Amsterdam
+
+# social images
+
+favicon: "/static/social-media-pictures/derek-en-moti-32x32.png"
+twitter: "@derekkedziora"
+social-media-image-url: "/static/social-media-pictures/derek-en-moti-16-9.jpeg"
+twitter-card-image: "/static/social-media-pictures/derek-met-moti-groot.jpeg"
+iOS-icon: "/static/social-media-pictures/derek-en-moti-180x180.png"
+
+
+# general settings
+
+highlighter: rouge
+markdown: kramdown
+parse_block_html: false
+show_drafts: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      blogpost: true
+      layout: post
+      og-type: article
+      social-media-image: false
+
+  -    
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page 
+      social-media-image: false   
+
+collections:
+  pages:
+    output: true

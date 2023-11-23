@@ -1,0 +1,33 @@
+<footer>
+	<script>
+	// I asked chatGPT to write this for me, ashamed to admit it but it worked much faster than I could
+	// Function to check if the page content is taller than the viewport
+	function isPageTallerThanViewport() {
+  		const body = document.body;
+  		const viewportHeight = window.innerHeight;
+  		const pageHeight = body.scrollHeight;
+
+  	return pageHeight > viewportHeight;
+	}
+
+	// Function to display the go-to-top link
+	function displayLink() {
+  		const link = document.getElementById("goToTopLink");
+		//link.style.display = "inline";
+
+	// If the page content is taller than the viewport, remove the link
+	// the logic chatGPT gave me was wrong, so had to negate this
+  		if (isPageTallerThanViewport()) {
+			link.style.display = "inline";
+  		}
+	}
+	
+	// Call the removeLink function when the page loads
+	window.addEventListener("load", displayLink);
+	</script>
+	<noscript><a href="#">Top &#8593;</a>&nbsp;|&nbsp;</noscript>
+	<span id="goToTopLink" style="display: none;"><a href="#">Top &#8593;</a>&nbsp;|&nbsp;</span>
+	{%- unless page.url == "/" -%}<a href="/" title="Home">Home</a>&nbsp;|&nbsp;{%- endunless -%}
+	{%- unless page.url == "/contact" -%}<a href="/contact" title="Contact">Contact</a>{%- unless page.url == "/rss" -%}&nbsp;|&nbsp;{%- endunless -%}{%- endunless -%}
+	{%- unless page.url == "/rss" -%}<a href="/rss" title="RSS">RSS</a>{%- endunless -%}
+</footer>
