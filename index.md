@@ -13,7 +13,7 @@ I’m Derek, a senior content designer based in the Netherlands. I’ve built a 
 
 ## Contact 
 
-I’m always happy to talk about content design! Whether you’d like some advice, a short-term project, or long-term collaboration please send me an email at **{{ site.email }}**.
+I’m always happy to talk about content design! Whether you’d like some advice, have a short-term project, or are invested in long-term collaboration, please send me an email at **{{ site.email }}**.
 
 <div class="tag-list copy-buttons">
 
