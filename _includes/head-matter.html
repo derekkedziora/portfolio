@@ -24,7 +24,7 @@
     {% endif %}
     <meta name="description" content="{{ page-description }}">
     <meta name="author" content="{{ site.author }}">
-    <link rel="canonical" href="{% if page.canonical %}{{ site.url }}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
+    <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | absolute_url }}{% endif %}">
     <meta name="generator" content="Jekyll" />
     
     <!-- OG metadata --> 
