@@ -7,5 +7,7 @@
 		{{ custom-nav }}
 	{%- endfor -%}
 {%- else -%}
-<a href="/" title="Home">Home</a>&nbsp;|&nbsp;<a href="/about" title="About">About</a>&nbsp;|&nbsp;<a href="/blog" title="Blog">Blog</a>&nbsp;|&nbsp;<a href="/notes" title="Notes">Notes</a>&nbsp;|&nbsp;<a href="/now" title="Now">Now</a>
+{%- unless page.url == "/" -%}<a href="/" title="Home">Home</a>&nbsp;|&nbsp;{%- endunless -%}
+	{%- unless page.url == "/portfolio" -%}<a href="/portfolio" title="Portfolio">Portfolio</a>{%- unless page.url == "/blog" -%}&nbsp;|&nbsp;{%- endunless -%}{%- endunless -%}
+	{%- unless page.url == "/blog" -%}<a href="/blog" title="Blog">Blog</a>{%- endunless -%}
 {%- endif -%}
